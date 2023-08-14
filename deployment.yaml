@@ -49,7 +49,7 @@ spec:
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
-          value: nifty-altar-394805:us-east4:wordpress-mysql
+          value: 34.85.148.193
         - name: WORDPRESS_DB_PASSWORD
           value: wordpress
         ports:
