@@ -30,7 +30,7 @@ jobs:
         run: gcloud config set project nifty-altar-394805
       
       - name: Set GKE Cluster
-        run: gcloud container clusters get-credentials cluster-dev --zone us-east4
+        run: gcloud container clusters get-credentials cluster-prod --zone europe-north1
      
       - name: Run build
         run: docker build -t  demo-wordpress .
@@ -50,10 +50,6 @@ jobs:
         run: |
           docker push sitharamaneesh/demo-wordpress:latest
           docker push sitharamaneesh/mariadb:10.5.8
-      
-      #- name: secrets 
-      # run: | 
-      #   kubectl create secret generic cloudsql-db-credentials --from-literal username=wordpress --from-literal password=wordpress
-      #    kubectl create secret generic cloudsql-instance-credentials --from-literal password=${{ secrets.GCP_SA_KEY }}    
+          
       - name: deploy
         run: kubectl apply -f deployment.yaml
