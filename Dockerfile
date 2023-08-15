@@ -3,7 +3,7 @@ FROM wordpress
 # Set environment variables used by the Wordpress image
 # DB_USER and DB_PASSWORD are included as an example. However,
 # these should be removed and set during docker run.
-ENV WORDPRESS_DB_HOST=35.236.234.178 \
+ENV WORDPRESS_DB_HOST=35.228.134.255 \
     WORDPRESS_DB_USER=root \
     WORDPRESS_DB_PASSWORD=wordpress \
     WORDPRESS_DB_NAME=wordpress_database \
