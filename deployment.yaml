@@ -46,7 +46,6 @@ spec:
     spec:
       containers:
       - image: sitharamaneesh/demo-wordpress
-        #imagePullPolicy: Never
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
