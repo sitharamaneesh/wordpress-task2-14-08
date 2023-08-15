@@ -66,18 +66,18 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: wordpress-ingress
+  name: wordpress
   annotations:
-    kubernetes.io/ingress.class: nginx # Adjust this based on your Ingress controller
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: wordpress.sithara.tech # Replace with your domain
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: wordpress
-                port:
-                  number: 80
+  - host: wordpress.sithara.tech
+    http:
+     paths:
+     - path: "/"
+       pathType: Prefix
+       backend:
+         service:
+           name: wordpress
+           port:
+             number: 80
