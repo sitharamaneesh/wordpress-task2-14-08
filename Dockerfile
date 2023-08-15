@@ -7,7 +7,7 @@ FROM wordpress
 ENV WORDPRESS_DB_HOST=35.228.134.255 \
     WORDPRESS_DB_USER=root \
     WORDPRESS_DB_PASSWORD=wordpress \
-    WORDPRESS_DB_NAME=wordpress_database \
+    WORDPRESS_DB_NAME=database2 \
     WORDPRESS_TABLE_PREFIX=wp_
 
 COPY wp-content/plugins/ /var/www/html/wp-content/plugins
