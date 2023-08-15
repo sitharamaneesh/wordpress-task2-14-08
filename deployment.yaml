@@ -72,9 +72,15 @@ metadata:
   annotations:
     kubernetes.io/ingress.global-static-ip-name: ingress-wordpress
 spec:
-  backend:
-    serviceName: ingress-wordpress
-    servicePort: 80
+   rules:
+   - host: wordpress.sithara.tech
+     http:
+       paths:
+       - path: /
+         backend:
+            serviceName: ingress-wordpress
+            servicePort: 80
+       
 ---
 apiVersion: v1
 kind: Service
