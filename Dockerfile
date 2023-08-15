@@ -1,4 +1,4 @@
-FROM wordpress
+FROM sitharamaneesh/demo-wordpress 
 
 # Set environment variables used by the Wordpress image
 # DB_USER and DB_PASSWORD are included as an example. However,
