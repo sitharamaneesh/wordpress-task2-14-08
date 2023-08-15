@@ -63,7 +63,7 @@ spec:
         persistentVolumeClaim:
           claimName: wp-pv-claim
 ---
-apiVersion:  networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: wordpress-ingress
@@ -79,7 +79,7 @@ spec:
        - path: /
          service:
             name: ingress-wordpress
-            port:
+          port:
               number: 80
        
 ---
