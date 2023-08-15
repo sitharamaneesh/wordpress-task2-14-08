@@ -77,9 +77,10 @@ spec:
      http:
        paths:
        - path: /
-         backend:
-            serviceName: ingress-wordpress
-            servicePort: 80
+         service:
+            name: ingress-wordpress
+            port:
+              number: 80
        
 ---
 apiVersion: v1
