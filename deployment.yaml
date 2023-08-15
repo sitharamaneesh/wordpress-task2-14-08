@@ -46,7 +46,7 @@ spec:
     spec:
       containers:
       - name: conatiner-wordpress
-        image: wordpress:latest
+        image: sitharamaneesh/demo-wordpress
         #imagePullPolicy: Never
         name: wordpress
         env:
