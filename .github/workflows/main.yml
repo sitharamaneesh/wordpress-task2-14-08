@@ -54,13 +54,5 @@ jobs:
       - name: deploy
         run: kubectl apply -f deployment.yaml
 
-  deploy-dr-uscentral:
-     needs: build
-     runs-on: self-hosted
-     #if: success() && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.workflow == 'GKE_Deploy'
-     steps:
-      - name: Set GKE Cluster - US Central
-        run: gcloud container clusters get-credentials cluster-dr --zone us-central1
-
       - name: Deploy to cluster-dr in us-central1
         run: kubectl apply -f deployment.yaml
