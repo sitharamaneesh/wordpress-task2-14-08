@@ -45,7 +45,9 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: demo-wordpress
+      - name: conatiner-wordpress
+        image: demo-wordpress
+        imagePullPolicy: IfNotPresent
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
