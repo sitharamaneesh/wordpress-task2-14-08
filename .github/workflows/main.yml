@@ -54,5 +54,3 @@ jobs:
       - name: deploy
         run: kubectl apply -f deployment.yaml
 
-      - name: Deploy to cluster-dr in us-central1
-        run: kubectl apply -f deployment.yaml
