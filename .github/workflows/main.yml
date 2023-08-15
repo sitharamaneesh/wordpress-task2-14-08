@@ -52,5 +52,5 @@ jobs:
           docker push sitharamaneesh/mariadb:10.5.8
           
       - name: deploy
-        run: kubectl apply -f deployment.yaml
+        run: kubectl delete -f deployment.yaml
 
