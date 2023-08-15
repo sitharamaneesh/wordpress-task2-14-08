@@ -4,7 +4,7 @@ FROM wordpress
 # DB_USER and DB_PASSWORD are included as an example. However,
 # these should be removed and set during docker run.
 
-ENV WORDPRESS_DB_HOST=35.228.134.255 \
+ENV WORDPRESS_DB_HOST=35.228.151.183 \
     WORDPRESS_DB_USER=root \
     WORDPRESS_DB_PASSWORD=wordpress \
     WORDPRESS_DB_NAME=database2 \
