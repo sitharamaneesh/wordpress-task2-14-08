@@ -6,5 +6,5 @@ FROM wordpress
 
 COPY wp-content/plugins/ /var/www/html/wp-content/plugins
 COPY wp-content/themes/ /var/www/html/wp-content/themes
-COPY wp-config.php /var/www/html/wp-config.php
+#COPY wp-config.php /var/www/html/wp-config.php
 #COPY wp-content/uploads/ /var/www/html/wp-content/uploads
