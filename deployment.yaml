@@ -69,8 +69,8 @@ metadata:
   name: wordpress-ingress
   labels:
     app: wordpress
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: ingress-wordpress
+  #annotations:
+    #kubernetes.io/ingress.global-static-ip-name: ingress-wordpress
 spec:
   rules:
     - host: wordpress.sithara.tech
