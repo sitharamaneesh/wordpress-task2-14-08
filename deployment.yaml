@@ -62,3 +62,22 @@ spec:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
           claimName: wp-pv-claim
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wordpress-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx # Adjust this based on your Ingress controller
+spec:
+  rules:
+    - host: sithara.tech# Replace with your domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: wordpress
+                port:
+                  number: 80
