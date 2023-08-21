@@ -27,7 +27,7 @@ jobs:
           credentials_json: '${{ secrets.GCP_SA_KEY }}'
 
       - name: Set GCP Project ID
-        run: gcloud config set project nifty-altar-394805
+        run: gcloud config set project sacred-flight-395012
       
       - name: Set GKE Cluster
         run: gcloud container clusters get-credentials cluster-prod --zone europe-north1
